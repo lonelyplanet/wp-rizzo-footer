@@ -3,9 +3,6 @@ namespace LonelyPlanet\Rizzo;
 
 class RizzoFooterWidgets extends RizzoWidgets
 {
-    protected $sidebar_args;
-    protected $format;
-
     public function __construct(array $sidebar_args, $format = null)
     {
         parent::__construct($sidebar_args, $format);
