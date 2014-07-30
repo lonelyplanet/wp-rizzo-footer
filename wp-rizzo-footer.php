@@ -10,7 +10,7 @@ include __DIR__ . '/inc/RizzoRizzoSitemapRowWidgets.php';
 include __DIR__ . '/inc/RizzoFooterContent.php';
 
 
-$wprizzofooter = new RizzoFooterContent();
+new RizzoFooterContent();
 
 
 new RizzoRizzoSitemapRowWidgets(
