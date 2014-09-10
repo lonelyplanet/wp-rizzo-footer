@@ -1,20 +1,19 @@
 <?php
 namespace LonelyPlanet\Rizzo;
 
-
 defined('ABSPATH') || exit;
 
+// Don't run on command line unless doing cron.
+if ( php_sapi_name() === 'cli' && ! defined('DOING_CRON') )
+    return;
 
-add_action('init', function () {
-
+add_action('plugins_loaded', function () {
 
     include __DIR__ . '/inc/RizzoFooterWidgets.php';
     include __DIR__ . '/inc/RizzoRizzoSitemapRowWidgets.php';
     include __DIR__ . '/inc/RizzoFooterContent.php';
 
-
     new RizzoFooterContent();
-
 
     new RizzoRizzoSitemapRowWidgets(
         array(
@@ -33,7 +32,6 @@ add_action('init', function () {
         </nav>'
     );
 
-
     new RizzoFooterWidgets(
         array(
             'name'          => 'Rizzo Footer 2',
@@ -48,7 +46,6 @@ add_action('init', function () {
         '<div class="row row--footer--about" role="contentinfo"><div class="row__inner row__inner--footer">%s</div></div>'
     );
 
-
     new RizzoFooterWidgets(
         array(
             'name'          => 'Rizzo Footer 3',
@@ -62,6 +59,5 @@ add_action('init', function () {
         ),
         '<div class="row row--smallprint"><div class="row__inner row__inner--footer row--smallprint__inner">%s</div></div>'
     );
-
 
 }, 50);
