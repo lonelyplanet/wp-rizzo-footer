@@ -6,7 +6,7 @@ Plugin URI: http://lonelyplanet.com/
 Author: Eric King
 Author URI: http://webdeveric.com/
 Description: This plugin provides widgets area in the footer.
-Version: 0.1.0
+Version: 0.1.1
 */
 
 defined('ABSPATH') || exit;
